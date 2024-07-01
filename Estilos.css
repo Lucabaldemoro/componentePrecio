@@ -1,0 +1,179 @@
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contenedor {
+  height: 25rem;
+  width: 25rem;
+  border: 1px solid;
+  border-radius: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #87ceeb;
+  position: relative;
+z-index: 1;
+  
+  /* Relative para crear un contexto de apilamiento */
+}
+
+.arena {
+  width:256px;
+  height:140px;
+  position: absolute;
+  top:242px;
+  right: 127px;
+
+  background-color: #C2B280;
+    transform: rotate(360deg);
+    border-bottom-left-radius: 900px;
+
+}
+
+
+
+.arena1 {
+  width:250px;
+  height:135px;
+  position: absolute;
+  top:250px;
+right: 26px;
+  background-color: black;
+  border-bottom-right-radius: 900px;
+  transform: translate(-80px);
+    transform: rotate(360deg);
+    background-color: #C2B280;
+}
+
+.arena2 {
+  width:70px;
+  height:70px;
+  position: absolute;
+  top:242px;
+right: 323px;
+  background-color: black;
+  border-bottom-right-radius: 400px;
+    transform: rotate(90deg);
+    background-color: #C2B280;
+}
+
+.arena3 {
+  width:40px;
+  height:40px;
+  position: absolute;
+  top:272px;
+right: 343px;
+  background-color: black;
+  border-bottom-right-radius: 400px;
+    transform: rotate(100deg);
+    background-color: #C2B280;
+}
+
+
+.arena4 {
+  width:100px;
+  height:22px;
+  position: absolute;
+  top:376px;
+right: 153px;
+  background-color: black;
+  border-bottom-left-radius: 400px;
+  border-bottom-right-radius: 400px;
+
+    transform: rotate(360deg);
+    background-color: #C2B280;
+}
+
+
+
+
+
+
+
+
+/*--------- partes de la piramide */
+
+.piramide-container {
+  background-color: #87ceeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.PiramiAdelante {
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-top: 100px solid transparent;
+  border-left: 100px solid transparent;
+  border-bottom: 100px solid #d19f57;
+  position: absolute;
+z-index: 1;
+
+}
+
+.Piramideatras {
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-top: 100px solid transparent;
+  border-left: 30px solid transparent;
+  border-bottom: 100px solid #ac8040;
+  position: absolute;
+  left: 170px;
+  transform: rotate(-360deg);
+  position: absolute;
+z-index: 1;
+
+}
+
+/*------------------------*/
+
+.contenedor-sol {
+  position: absolute;
+  z-index: 1;
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  
+}
+
+.sol {
+  background-color: yellow;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 200px;
+}
+
+
+
+
+
+/*------------------------------ zona de los hover ----*/
+
+.contenedor:hover .sol {
+  transform: translate(260px, -100px);
+  transition: 2s;
+}
+
+
+
+.contenedor:hover .PiramiAdelante {
+  border-bottom: 100px solid #ac8040;
+  transition: 2s;
+}
+
+.contenedor:hover .Piramideatras {
+  border-bottom: 100px solid #d19f57;
+  transition: 2s;
+}
